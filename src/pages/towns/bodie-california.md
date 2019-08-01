@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: town-post
 title: Bodie
 date: 2019-07-31T20:50:58.051Z
 state: california
