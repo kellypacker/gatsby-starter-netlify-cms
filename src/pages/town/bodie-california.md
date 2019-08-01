@@ -11,6 +11,7 @@ website: 'http://www.parks.ca.gov/?page_id=509'
 summary: >-
   Only a small part of the town survived, with about 110 structures still
   standing, including one of many once operational gold mills.
+description: Narrative
 directions: >-
   The park is northeast of Yosemite, 13 miles east of Highway 395 on Bodie Road,
   seven miles south of Bridgeport. From U.S. 395 seven miles south of
