@@ -61,10 +61,11 @@ collections:
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
 
   - name: "town"
-    label: "Towns"
+    label: "Town"
     folder: "src/pages/town"
     create: true
     slug: "{{title}}-{{state}}"
+    extension: "json"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
@@ -76,7 +77,8 @@ collections:
           - { label: "California", value: "california" }
           - { label: "Montana", value: "montana" }
           - { label: "Virginia", value: "virginia" }
-      - {label: "Featured", name: "featured", widget: "boolean"}
+      - {label: "County", name: "county", widget: "string"}
+      - {label: "Featured", name: "featured", widget: "boolean", required: false}
       - {label: "Latitude", name: "latitude", widget: "string"}
       - {label: "Longitude", name: "longitude", widget: "string"}
       - {label: "Website", name: "website", widget: "string", required: false}
@@ -92,3 +94,5 @@ collections:
       - {label: "Directions", name: "directions", widget: "markdown", required: false}
       - {label: "History", name: "history", widget: "markdown", required: false}
       - {label: "Legacy", name: "legacy", widget: "markdown", required: false}
+      - {label: "Test ID", name: "testID", widget: "string"}
+      - {label: "ObjectID", name: "objectID", widget: "string"}

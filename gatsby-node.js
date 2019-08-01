@@ -14,6 +14,7 @@ exports.createPages = ({ actions, graphql }) => {
             id
             fields {
               slug
+              testID
             }
             frontmatter {
               tags
@@ -30,7 +31,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const posts = result.data.allMarkdownRemark.edges
-
+    
     posts.forEach(edge => {
       const id = edge.node.id
       createPage({
@@ -42,6 +43,7 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          testID: 'test'
         },
       })
     })
