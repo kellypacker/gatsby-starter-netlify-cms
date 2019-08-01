@@ -3,6 +3,7 @@ templateKey: blog-post
 title: Bodie
 date: 2019-07-31T20:50:58.051Z
 state: california
+county: Mono
 featured: true
 latitude: '38.211828'
 longitude: '-119.012898'
