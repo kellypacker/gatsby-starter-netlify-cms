@@ -62,7 +62,7 @@ collections:
 
   - name: "town"
     label: "Town"
-    folder: "src/pages/town"
+    folder: "src/pages/towns"
     create: true
     slug: "{{title}}-{{state}}"
     # extension: "json"
@@ -94,4 +94,3 @@ collections:
       - {label: "Directions", name: "directions", widget: "markdown", required: false}
       - {label: "History", name: "history", widget: "markdown", required: false}
       - {label: "Legacy", name: "legacy", widget: "markdown", required: false}
-      - {label: "test", name: "test", widget: "string", required: false}
