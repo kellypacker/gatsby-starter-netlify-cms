@@ -1,4 +1,10 @@
-var proxy = require('http-proxy-middleware')
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+var proxy = require('http-proxy-middleware');
+
+// const algoliaQuery = ``
 
 module.exports = {
   siteMetadata: {
@@ -29,6 +35,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/img`,
         name: 'images',
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
       },
     },
     'gatsby-plugin-sharp',
@@ -74,6 +87,16 @@ module.exports = {
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
+    // {
+    //   resolve: `gatsby-plugin-algolia`,
+    //   options: {
+    //     appId: process.env.REACT_APP_ALGOLIA_APP_ID,
+    //     apiKey: process.env.REACT_APP_ALGOLIA_API_KEY,
+    //     indexName: process.env.REACT_APP_ALGOLIA_INDEX, // for all queries
+    //     queries,
+    //     chunkSize: 10000, // default: 1000
+    //   },
+    // },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
   // for avoiding CORS while developing Netlify Functions locally

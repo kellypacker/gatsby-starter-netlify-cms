@@ -65,9 +65,9 @@ collections:
     folder: "src/pages/town"
     create: true
     slug: "{{title}}-{{state}}"
-    extension: "json"
+    # extension: "json"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "town-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - label: "State"
@@ -94,5 +94,4 @@ collections:
       - {label: "Directions", name: "directions", widget: "markdown", required: false}
       - {label: "History", name: "history", widget: "markdown", required: false}
       - {label: "Legacy", name: "legacy", widget: "markdown", required: false}
-      - {label: "Test ID", name: "testID", widget: "string"}
-      - {label: "ObjectID", name: "objectID", widget: "string"}
+      - {label: "test", name: "test", widget: "string", required: false}

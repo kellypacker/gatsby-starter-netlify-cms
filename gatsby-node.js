@@ -14,7 +14,6 @@ exports.createPages = ({ actions, graphql }) => {
             id
             fields {
               slug
-              testID
             }
             frontmatter {
               tags
@@ -43,7 +42,6 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
-          testID: 'test'
         },
       })
     })
@@ -77,7 +75,7 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   fmImagesToRelative(node) // convert image paths for gatsby images
-
+  
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
